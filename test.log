@@ -1,0 +1,32 @@
+$ make run
+mkdir -p "bin"
+export GO111MODULE="on" && export GOFLAGS="" && export GOWORK=off && go build  -ldflags="-s -w" -mod=mod -o "bin" .
+./bin/test-utils
+running informer of ingresscontrollers
+running informer of svc
+svc added:  metrics  CreationTimestamp:  2024-01-09 19:37:06 +0800 CST
+ingresscontrollers added:  default  CreationTimestamp:  2024-01-09 19:35:59 +0800 CST
+ingresscontrollers added:  test  CreationTimestamp:  2024-01-09 19:49:26 +0800 CST
+ingresscontrollers updated new:  test  DeletionTimestamp:  <nil>
+ingresscontrollers deleted:  test  DeletionTimestamp:  <nil>
+svc added:  test  CreationTimestamp:  2024-01-09 19:49:37 +0800 CST
+svc updated new:  test  DeletionTimestamp:  <nil>
+svc updated new:  test  DeletionTimestamp:  <nil>
+svc updated new:  test  DeletionTimestamp:  <nil>
+svc updated new:  test  DeletionTimestamp:  <nil>
+svc updated new:  test  DeletionTimestamp:  <nil>
+svc updated new:  test  DeletionTimestamp:  <nil>
+svc deleted:  test  DeletionTimestamp:  <nil>
+svc deleted:  metrics  DeletionTimestamp:  <nil>
+ingresscontrollers updated new:  default  DeletionTimestamp:  2024-01-09 19:49:58 +0800 CST
+ingresscontrollers deleted:  default  DeletionTimestamp:  2024-01-09 19:49:58 +0800 CST
+ingresscontrollers added:  default  CreationTimestamp:  2024-01-09 19:50:59 +0800 CST
+ingresscontrollers updated new:  default  DeletionTimestamp:  <nil>
+ingresscontrollers updated new:  default  DeletionTimestamp:  <nil>
+ingresscontrollers updated new:  default  DeletionTimestamp:  <nil>
+ingresscontrollers updated new:  default  DeletionTimestamp:  <nil>
+ingresscontrollers updated new:  default  DeletionTimestamp:  <nil>
+ingresscontrollers updated new:  default  DeletionTimestamp:  <nil>
+ingresscontrollers updated new:  default  DeletionTimestamp:  <nil>
+ingresscontrollers updated new:  default  DeletionTimestamp:  <nil>
+^Cmake: *** [run] Interrupt: 2

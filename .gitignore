@@ -1,0 +1,9 @@
+/bin
+/bin/*
+kubeconfig
+kubeadmin-password
+/.vscode
+/.idea
+.DS_Store
+vendor/*
+test-utils
