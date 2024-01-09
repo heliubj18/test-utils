@@ -15,9 +15,10 @@ func main() {
 	kubeconfigPath := os.Getenv("KUBECONFIG")
 	config, err := clientcmd.BuildConfigFromFlags("", kubeconfigPath)
 	chErr(err)
+	startWatchOperator(ctx, config, namespace, "default")
 
-	startWatchOperator(ctx, config, namespace)
-	startWatchSVC(ctx, config, namespace)
+	namespace = "openshift-ingress"
+	startWatchSVC(ctx, config, namespace, "router-default")
 
 	time.Sleep(time.Second * 600)
 	cancel()
